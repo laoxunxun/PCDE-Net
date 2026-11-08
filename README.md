@@ -45,17 +45,26 @@ Outputs land in `experiments/<name>/` (checkpoints, predictions, `metrics.json`)
 
 ## Pretrained weights
 
-All 23 checkpoints referenced by the paper (5.6 GB, `best.pth` only). File names follow `<config_name>_best.pth`; a run name without a seed suffix uses the default seed 42.
+All 23 checkpoints referenced by the paper (5.6 GB total, `best.pth` only; `ckpt_last.pth` is not distributed). The download is organized as **one folder per run**, each containing that run's `best.pth` — the folder name equals the configuration name in `configs/` (a run name without a seed suffix uses the default seed 42):
 
-| Group | Files | Role in paper |
+| Folder | Take | Role in paper |
 |---|---|---|
-| `A-main/` | `exp01_640_best.pth` … | main model, 3-seed final configuration, 3-seed baseline, 640² baseline, learned arbitration, κ-fusion |
-| `B-ablations/` | `abl_*_best.pth` | free-gate, single-domain, separate-fusion, no-frequency, K=2/6, dual-B3, S²CPM-head-only |
-| `C-rgb-transfer/` | `rgb_pcde_cod10k_best.pth`, `rgb_baseline_best.pth` | Table VII |
+| `exp01_640` | `best.pth` | **Main model** (Table II, 640², S 0.8833) |
+| `abl_noarbitrate_512` + `_s123` + `_s202` | `best.pth` ×3 | Final configuration, 3 seeds (Table III, 0.8748 ± 0.0070) |
+| `exp00_baseline_512pvt` + `_s123` + `_s202` | `best.pth` ×3 | No-physics baseline, 3 seeds (Table III, 0.8756 ± 0.0050) |
+| `exp00_baseline_640` | `best.pth` | 640² baseline |
+| `exp01_v11_pvt512`, `exp01_v11_seed2` | `best.pth` ×2 | Learned arbitration, 2 seeds |
+| `exp01_kappa_arb` | `best.pth` | κ-fusion (Table IV) |
+| `abl_anchor_learned_512` | `best.pth` | Free-gate control |
+| `abl_only_spec` / `abl_only_spat` / `abl_only_freq` | `best.pth` ×3 | Single-domain controls (Table IV) |
+| `abl_sep2dom_512`, `abl_tde_nofreq_512` | `best.pth` ×2 | Separate fusion / no-frequency controls |
+| `abl_k2`, `abl_k6`, `abl_dual_b3_512`, `exp01_nodc_512pvt` | `best.pth` ×4 | Design choices (Table III) |
+| `rgb_pcde_cod10k`, `rgb_baseline` | `best.pth` ×2 | RGB transfer pair (Table VII) |
 
 **Download (Baidu Netdisk)**: <https://pan.baidu.com/s/1ZaiT9TNuUUIqp_pvVIE6iw> (access code: `34uz`)
 International mirror (Zenodo DOI) will be added upon publication.
-Verify with `sha256sum -c weights_sha256.txt` (checksums of the original files are in this repo).
+
+Verify after download: `sha256sum -c weights_sha256.txt` from the parent folder of the run folders (each checksum refers to `<run>/best.pth`).
 
 Per-image predictions of all 23 runs are published as a Release attachment (`preds.zip`).
 
