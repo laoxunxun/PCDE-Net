@@ -97,12 +97,4 @@ MIT (this repository's own code). Comparison methods referenced or reproduced fo
 
 ## Citation
 
-```
-@article{pcdenet,
-  title   = {Spectral Unmixing-Guided Feature Decoupling and Enhancement for Multispectral Camouflaged Object Detection},
-  author  = {Sun, Haoran and Qu, Jue and Wang, Wei and Liu, Haiping and Zhou, Hengfei and Yang, Bo},
-  journal = {IEEE Transactions on Circuits and Systems for Video Technology},
-  year    = {2026},
-  note    = {to appear}
-}
-```
+The BibTeX entry will be added upon publication.
