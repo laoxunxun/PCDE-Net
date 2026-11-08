@@ -1,0 +1,16 @@
+{
+  "name": "abl_only_spat",
+  "official": {
+    "MAE": 0.0021404443993634265,
+    "Sm": 0.8778495146695194,
+    "Em": 0.9317420168651935,
+    "Em_max": 0.9584320978144478,
+    "wF": 0.7386171024233422,
+    "Fb": 0.7578101400894359,
+    "Fb_max": 0.7944375378942097
+  },
+  "best_val_Sm": 0.9353339446401133,
+  "best_ep": 119,
+  "params_M": 61.008623,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

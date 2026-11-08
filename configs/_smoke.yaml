@@ -1,0 +1,15 @@
+# _smoke — pipeline integrity test only (tiny backbone, 64-img subset, 3 epochs)
+seed: 42
+data: {root: "./data/mcod", size: 352, cache: "./data/mcod/cache352", multiscale: true,
+       physics_aug: true, train_subset: 64}
+model:
+  type: pcde
+  v_arch: swin_tiny_patch4_window7_224
+  nv_arch: swin_tiny_patch4_window7_224
+  pretrained: false
+  grad_ckpt: true
+  k_endmembers: 4
+  work_size: 96
+train: {batch: 4, workers: 0, lr: 1.0e-4, epochs: 3, eval_interval: 1, val_batch: 4}
+loss: {l_iou: 1.0, l_edge: 0.5, l_ds: 0.5, l_ssim: 1.0, weighted: true,
+       l_rec: 0.5, l_abd: 0.3, l_ort: 0.05, l_gate: 0.3}

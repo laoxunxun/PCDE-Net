@@ -1,0 +1,23 @@
+# abl_noarbitrate_512 — v11协议 + κ仲裁消融 — 耦合模型支配增强策略的证据
+seed: 202
+data: {root: "./data/mcod", size: 512, cache: "./data/mcod/cache512", multiscale: true, physics_aug: true}
+model:
+  type: pcde
+  backbone_type: pvt
+  v_arch: pvt_v2_b3
+  nv_arch: pvt_v2_b1
+  pretrained: true
+  grad_ckpt: true
+  k_endmembers: 4
+  work_size: 96
+  use_s2cpm: true
+  use_decouple: true
+  anchor: phys
+  use_spec: true
+  use_spat: true
+  use_freq: true
+  use_arbitrate: false
+train: {batch: 8, workers: 2, lr: 1.0e-4, epochs: 300, eval_interval: 15}
+loss: {l_iou: 1.0, l_edge: 0.5, l_ds: 0.5, l_ssim: 1.0, weighted: true,
+       l_rec: 0.5, l_abd: 0.3, l_ort: 0.0, l_gate: 0.0,
+       pos_warmup: 15, phys_warmup: 0, l_area: 1.0}

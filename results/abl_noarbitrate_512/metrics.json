@@ -1,0 +1,16 @@
+{
+  "name": "abl_noarbitrate_512",
+  "official": {
+    "MAE": 0.0021551756701596583,
+    "Sm": 0.8824155988948954,
+    "Em": 0.9345440600062598,
+    "Em_max": 0.9635284422392668,
+    "wF": 0.7386682061990221,
+    "Fb": 0.7546718215365216,
+    "Fb_max": 0.8018520481048795
+  },
+  "best_val_Sm": 0.9357006364655727,
+  "best_ep": 164,
+  "params_M": 61.028143,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

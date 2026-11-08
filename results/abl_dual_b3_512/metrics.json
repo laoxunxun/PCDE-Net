@@ -1,0 +1,16 @@
+{
+  "name": "abl_dual_b3_512",
+  "official": {
+    "MAE": 0.002042015229821918,
+    "Sm": 0.8767888919006002,
+    "Em": 0.9260319040995884,
+    "Em_max": 0.950788676592873,
+    "wF": 0.7375663835237197,
+    "Fb": 0.7526809614511903,
+    "Fb_max": 0.7888644507476344
+  },
+  "best_val_Sm": 0.9394838613213845,
+  "best_ep": 179,
+  "params_M": 92.257899,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

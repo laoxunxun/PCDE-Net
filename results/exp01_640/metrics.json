@@ -1,0 +1,16 @@
+{
+  "name": "exp01_640",
+  "official": {
+    "MAE": 0.0018815084387969294,
+    "Sm": 0.8832535597992631,
+    "Em": 0.9345637078959499,
+    "Em_max": 0.9595023819688832,
+    "wF": 0.7554721590823896,
+    "Fb": 0.7694314052250935,
+    "Fb_max": 0.800673034550917
+  },
+  "best_val_Sm": 0.9462047763241147,
+  "best_ep": 134,
+  "params_M": 61.028143,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

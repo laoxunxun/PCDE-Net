@@ -1,0 +1,24 @@
+# rgb_baseline — RGB对照: PVT-B3单流直连(无物理模块, 无PGMA)
+# 训练 COD10K-train camo 3040; 测试 COD10K-test/CAMO/CHAMELEON (协议注记: 4040标准缺CAMO-train)
+seed: 42
+data: {dataset_type: rgbcod, root: "./data/cod10k", size: 352, multiscale: true}
+model:
+  type: pcde
+  backbone_type: pvt
+  v_arch: pvt_v2_b3
+  rgb: true
+  pretrained: true
+  grad_ckpt: true
+  k_endmembers: 4
+  use_s2cpm: false
+  use_decouple: false
+  anchor: phys
+  use_spec: true
+  use_spat: true
+  use_freq: true
+  use_arbitrate: false
+  tde_tau: 0.25
+train: {batch: 8, workers: 4, lr: 1.0e-4, epochs: 60, eval_interval: 5, val_batch: 8}
+loss: {l_iou: 1.0, l_edge: 0.5, l_ds: 0.5, l_ssim: 1.0, weighted: true,
+       l_rec: 0.5, l_abd: 0.3, l_ort: 0.0, l_gate: 0.0,
+       pos_warmup: 10, phys_warmup: 0, l_area: 1.0}

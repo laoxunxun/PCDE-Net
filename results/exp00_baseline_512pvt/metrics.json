@@ -1,0 +1,16 @@
+{
+  "name": "exp00_baseline_512pvt",
+  "official": {
+    "MAE": 0.002037898545531166,
+    "Sm": 0.8809815761914673,
+    "Em": 0.9317840336088767,
+    "Em_max": 0.9578420163876517,
+    "wF": 0.7479213296394908,
+    "Fb": 0.766568688505546,
+    "Fb_max": 0.8011809237752316
+  },
+  "best_val_Sm": 0.9342568178200027,
+  "best_ep": 239,
+  "params_M": 60.292422,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

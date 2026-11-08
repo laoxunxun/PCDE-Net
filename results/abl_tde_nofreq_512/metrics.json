@@ -1,0 +1,16 @@
+{
+  "name": "abl_tde_nofreq_512",
+  "official": {
+    "MAE": 0.0022238960333258715,
+    "Sm": 0.8699299393224824,
+    "Em": 0.926384868319901,
+    "Em_max": 0.954256366447799,
+    "wF": 0.7225389082698307,
+    "Fb": 0.7369800023534154,
+    "Fb_max": 0.7812382251304002
+  },
+  "best_val_Sm": 0.9343054485552519,
+  "best_ep": 134,
+  "params_M": 61.027159,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

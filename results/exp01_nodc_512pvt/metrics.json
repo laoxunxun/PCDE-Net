@@ -1,0 +1,16 @@
+{
+  "name": "exp01_nodc_512pvt",
+  "official": {
+    "MAE": 0.002111524944431789,
+    "Sm": 0.8755261056620481,
+    "Em": 0.9291902305141426,
+    "Em_max": 0.9595126333773936,
+    "wF": 0.7309815741454265,
+    "Fb": 0.7504331802478343,
+    "Fb_max": 0.78768000595589
+  },
+  "best_val_Sm": 0.9299345398412168,
+  "best_ep": 134,
+  "params_M": 60.294187,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

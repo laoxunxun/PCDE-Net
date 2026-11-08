@@ -1,0 +1,16 @@
+{
+  "name": "exp01_v11_seed2",
+  "official": {
+    "MAE": 0.002102954083888566,
+    "Sm": 0.8773480895645757,
+    "Em": 0.9257043470297626,
+    "Em_max": 0.9560097791275816,
+    "wF": 0.7344235334816932,
+    "Fb": 0.7512146936548233,
+    "Fb_max": 0.790331983822248
+  },
+  "best_val_Sm": 0.9362095779585606,
+  "best_ep": 149,
+  "params_M": 61.028203,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

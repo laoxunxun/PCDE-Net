@@ -1,0 +1,14 @@
+# PCDE-Net dependencies (Python 3.11, CUDA 12.4 build)
+# torch/torchvision: any build >= 2.1 works; tested with cu124 wheels below
+torch==2.6.0
+torchvision==0.21.0
+timm==1.0.14
+opencv-python==4.12.0.88
+numpy==2.2.6
+scipy==1.13.0
+PyYAML==6.0.1
+pillow==10.4.0
+pysodmetrics==1.6.2
+fvcore==0.1.5.post20221221
+matplotlib==3.10.3
+tqdm==4.65.2

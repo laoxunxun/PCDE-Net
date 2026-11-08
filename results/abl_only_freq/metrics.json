@@ -1,0 +1,16 @@
+{
+  "name": "abl_only_freq",
+  "official": {
+    "MAE": 0.0021230610782433644,
+    "Sm": 0.8763741233705978,
+    "Em": 0.9324740081741055,
+    "Em_max": 0.9662630747844896,
+    "wF": 0.7331976549694481,
+    "Fb": 0.7554571257604017,
+    "Fb_max": 0.7919658105118357
+  },
+  "best_val_Sm": 0.9322219178514574,
+  "best_ep": 119,
+  "params_M": 61.008623,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "abl_sep2dom_512",
+  "official": {
+    "MAE": 0.0020832970840565703,
+    "Sm": 0.8781680734466499,
+    "Em": 0.9333611558949784,
+    "Em_max": 0.9599601082494273,
+    "wF": 0.7395385147111035,
+    "Fb": 0.755030649202912,
+    "Fb_max": 0.7947899346012135
+  },
+  "best_val_Sm": 0.9381759166717529,
+  "best_ep": 149,
+  "params_M": 61.799215,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

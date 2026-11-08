@@ -1,0 +1,14 @@
+# exp00 — dual Swin + plain-add fusion + PCE decoder, NO physics modules.
+# The fair capacity-matched baseline for every PCDE claim.
+seed: 42
+data: {root: "./data/mcod", size: 512, cache: "./data/mcod/cache512", multiscale: true, physics_aug: true}
+model:
+  type: dual_baseline
+  backbone_type: pvt          # use_s2cpm=False, no AGD/TDE anywhere
+  v_arch: pvt_v2_b3
+  nv_arch: pvt_v2_b1
+  pretrained: true
+  grad_ckpt: true
+train: {batch: 8, workers: 6, lr: 1.0e-4, epochs: 300, eval_interval: 15}
+loss: {l_iou: 1.0, l_edge: 0.5, l_ds: 0.5, l_ssim: 1.0, weighted: true,
+       l_rec: 0.0, l_abd: 0.0, l_ort: 0.0, l_gate: 0.0}

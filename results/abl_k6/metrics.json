@@ -1,0 +1,16 @@
+{
+  "name": "abl_k6",
+  "official": {
+    "MAE": 0.002033618511310957,
+    "Sm": 0.8818224248826095,
+    "Em": 0.9306129305799388,
+    "Em_max": 0.9579583852259049,
+    "wF": 0.7466786556178601,
+    "Fb": 0.7650873299956711,
+    "Fb_max": 0.7996352731506967
+  },
+  "best_val_Sm": 0.9282014086408522,
+  "best_ep": 194,
+  "params_M": 61.028225,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

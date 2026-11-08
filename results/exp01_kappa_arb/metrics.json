@@ -1,0 +1,16 @@
+{
+  "name": "exp01_kappa_arb",
+  "official": {
+    "MAE": 0.0020508118077435062,
+    "Sm": 0.8794995668720617,
+    "Em": 0.9273184069356809,
+    "Em_max": 0.9610442283503763,
+    "wF": 0.7458193706986059,
+    "Fb": 0.767247102973907,
+    "Fb_max": 0.8006358258966537
+  },
+  "best_val_Sm": 0.9366782053003033,
+  "best_ep": 179,
+  "params_M": 61.028143,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "abl_only_spec",
+  "official": {
+    "MAE": 0.002007928593380795,
+    "Sm": 0.8791138569705097,
+    "Em": 0.9313689194969539,
+    "Em_max": 0.9604003969227823,
+    "wF": 0.7406410345164576,
+    "Fb": 0.7592292842420063,
+    "Fb_max": 0.7935645126166379
+  },
+  "best_val_Sm": 0.9392631696265878,
+  "best_ep": 194,
+  "params_M": 61.026095,
+  "protocol": "val-selected (deterministic 103-img tail of train); test touched once, 4-way flip TTA"
+}

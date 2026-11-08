@@ -1,0 +1,24 @@
+# exp01_nodc_512pvt — 消融行: S2CPM-only(无解耦) 同主实验协议(512+PVT-B3/B1)
+# 目标流特征死亡→边界信号消失→50:1加权BCE整体偏置坍塌) + pos_weight 15ep预热(保护门控特征脆弱期)
+seed: 42
+data: {root: "./data/mcod", size: 512, cache: "./data/mcod/cache512", multiscale: true, physics_aug: true}
+model:
+  type: pcde
+  backbone_type: pvt
+  v_arch: pvt_v2_b3
+  nv_arch: pvt_v2_b1
+  pretrained: true
+  grad_ckpt: true
+  k_endmembers: 4
+  work_size: 96
+  use_s2cpm: true
+  use_decouple: false
+  anchor: phys
+  use_spec: true
+  use_spat: true
+  use_freq: true
+  use_arbitrate: true
+train: {batch: 8, workers: 6, lr: 1.0e-4, epochs: 300, eval_interval: 15}
+loss: {l_iou: 1.0, l_edge: 0.5, l_ds: 0.5, l_ssim: 1.0, weighted: true,
+       l_rec: 0.5, l_abd: 0.3, l_ort: 0.0, l_gate: 0.0,
+       pos_warmup: 15, phys_warmup: 0, l_area: 1.0}
